@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+
+    
+   
+    <string name="connect_wifi">Connect to wifi</string>
+    <string name="write_facebook">write your event</string>
+    <string name="start_camera">start camera with tag</string>
+    <string name="title_activity_test_protocol">TestProtocol</string>
+    <string name="test_protocol">Test the NFC Protocol</string>
+    <string name="title_activity_write_id">WriteId</string>
+    <string name="title">Pervasive NFC Project</string>
+    <string name="nfc_button">Arthur Magnien\nLuleå University of Technology\nLuleå, Sweden\nartmag-2@student.ltu.se\n\nGeoffrey Levêque\nLuleå University of Technology\nLuleå, Sweden\ngeolev-2@student.ltu.se</string>
+    <string name="buy_tags_button">Buy NFC tags</string>
+    <string name="welcome_button">[ Near Field Communication (NFC) is a short-range communication channel that is one of the most promising technologies around !\nOne of the principles for NFC is to make easier first-time connections to other wireless technologies, like Bluetooth and Wi-Fi ]\n\n     In this Android App we introduce NFC in an experimental scenario, where the aim is to master the NFC technology starting from scratch creating services applications more and more sophisticated. And once the aim of the experimental will be achieve, try to find a way to use NFC to secure connexion between two devices. For that, we will go through the Visio challenge where the aim is to allow two devices to communicate with each other, starting from reading two tags with NFC communication.\n     For the NFC experimental scenario part, we have chosen to work with an Android Phone, Samsung Nexus S and NFC writable tags of 44 bytes mainly.\n     The Visio challenge will require two NFC writable tags and two Android phones, the Samsung Nexus S previously used and a Samsung Galaxy S3. </string>
+    <string name="title_activity_open_camera">Open Camera</string>
+    <string name="open_facebook">Open Facebook profil</string>
+    <string name="title_activity_write_camera">Write Camera</string>
+    <string name="title_activity_camera_view">Camera View</string>
+    <string name="enable_bluetooth2">Put the tag close to the phone to write on it</string>
+    <string name="about_us">About Us</string>
+    <string name="presentation_button">Experimenting services using NFC with phones</string>
+    <string name="slide_button">Info</string>
+    <string name="who_we_are">Who we are</string>
+    <string name="slide_button_2">Slide Button</string>
+    <string name="title_activity_beam">Send a string using Beam</string>
+    <string name="title_activity_morpion">Play a game with Android Beam</string>
+    <string name="Morpion">Play a game</string>
+    <string name="Beam">Send a string</string>
+    <string name="response">Response</string>
+    <string name="app_name">Experimenting services using NFC with phones</string>
+    <string name="error_detected">Tag not detected.</string>
+    <string name="ok_writing">this is on the tag now !.</string>
+    <string name="error_writing">Error during writting, maybe the tag is to far from the phone.</string>
+    <string name="ok_detection">Tag detected : </string>
+    <string name="hello_world">Hello world man!</string>
+     <string name="hello_world_2">Yo!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_nfc_add_friends">NfcAddFriendsActivity</string>
+    <string name="title_activity_tag_discovered">TagDiscoveredActivity</string>
+    <string name="title_activity_change_setting">Change the Brightness</string>
+    <string name="write_your_message">Enter a message:</string>
+    <string name="message">Message</string>
+    <string name="uri">http://</string>
+    <string name="phone_number">Phone number</string>
+    <string name="http">Enter an URI:</string>
+    <string name="write_angry">Write on the tag</string>
+    <string name="currentRankLabel">currentRankLabel</string>
+    <string name="title_activity_write_string">Write a text</string>
+    <string name="write_string">Write a string</string>
+    <string name="write_url">Write an url</string>
+    <string name="write_brightness">Set brightness setting</string>
+    <string name="title_activity_write_uri">Write an URL</string>
+    <string name="title_activity_write_setting">Change the Brightness</string>
+    <string name="title_activity_display_string">This is text!</string>
+    <string name="title_activity_write_destination">This is destination!</string>
+    <string name="title_activity_read_destination">This is destination!</string>
+    <string name="choose_brightness">Choose the brightness</string>
+    <string name="title_activity_select">SelectActivity</string>
+    <string name="title_activity_add_contact">Write a contact!</string>
+    <string name="add_contact">Add contacts</string>
+    <string name="add_name">Name:</string>
+    <string name="add_firstname">First name:</string>
+    <string name="add_tel">Tel:</string>
+    <string name="title_activity_read_contact">ReadContact</string>
+    <string name="new_contact">New contact added!</string>
+    <string name="make_call">Make a call</string>
+    <string name="title_activity_write_call">Write a Number</string>
+    <string name="title_activity_make_call">MakeCall</string>
+    <string name="write_your_destination">Write your destination:</string>
+    <string name="write_number">Enter a phone number:</string>
+    <string name="destination_1">Destination</string>
+    <string name="destination_2">Choose a destination</string>
+    <string name="destination">Write the destination on the NFC tag</string>
+    <string name="destination_3">test</string>
+    <string name="enable_bluetooth">Put the tag close to the phone to write on it</string>
+    <string name="title_activity_write_bluetooth">Enable/Disable Bluetooth</string>
+    <string name="title_activity_enable_bluetooth">Enable Bluetooth</string>
+    <string name="title_activity_write_wifi">Set Wifi Configuration</string>
+    <string name="ssid">SSID</string>
+    <string name="title_activity_write_facebook">WriteFacebook</string>
+    <string name="title_activity_connect_wifi">ConnectWifi</string>
+    <string name="title_activity_open_facebook">OpenFacebook</string>
+    <string name="password">Password</string>
+    <string name="city">City selected</string>
+    <string-array name="destination">
+        <item>Londres</item>
+        <item>Paris</item>
+        <item>Rome</item>
+    </string-array>
+
+</resources>

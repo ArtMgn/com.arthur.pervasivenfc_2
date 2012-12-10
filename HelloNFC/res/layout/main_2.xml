@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/blue_2"
+    android:orientation="vertical" >
+    
+    <TextView 
+	    android:id="@+id/welcome"
+	    android:layout_width="fill_parent"
+	    android:layout_marginTop="10dp"
+	    android:layout_marginLeft="10dp"
+	    android:layout_height="25dp"
+	    android:textColor="@color/white"
+	    android:text="Welcome !" />
+           
+    	<Button
+        	android:id="@+id/welcome_button"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_marginLeft="10dp"
+        	android:layout_marginRight="10dp"
+        	android:gravity="left"
+        	android:text="@string/welcome_button" />
+    	
+    	<TextView 
+	    	android:id="@+id/more_info_nfc"
+	    	android:layout_width="fill_parent"
+	    	android:layout_marginTop="10dp"
+	    	android:layout_marginLeft="10dp"
+	    	android:layout_height="25dp"
+	    	android:textColor="@color/white"
+	    	android:text="About us" />
+    	
+    	<Button
+        	android:id="@+id/nfc_button"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_marginLeft="10dp"
+        	android:layout_marginRight="10dp"
+        	android:text="@string/nfc_button" />
+    	
+    
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.arthur.pervasivenfc"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="10" />
+
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CALL_PHONE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CALL_PRIVILEGED" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <uses-library android:name="com.google.android.maps" />
+        <activity
+            android:name="com.arthur.pervasivenfc.MainActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SelectActivity"
+            android:label="@string/title_activity_select"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoDisplay" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="tags.to"
+                    android:path="/test"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ExecuteActivity.ReadContact"
+            android:label="@string/title_activity_read_contact"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoDisplay" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ExecuteActivity.DisplayString"
+            android:label="@string/title_activity_display_string"
+            android:launchMode="singleInstance" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name=".ExecuteActivity.TestProtocol"
+            android:label="@string/title_activity_display_string"
+            android:launchMode="singleInstance" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ExecuteActivity.MakeCall"
+            android:label="@string/title_activity_make_call"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoDisplay" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ExecuteActivity.ChangeSetting"
+            android:label="@string/title_activity_change_setting"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".WriteActivity.AddContact"
+            android:label="@string/title_activity_add_contact" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.arthur.pervasivenfc.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ExecuteActivity.EnableBluetooth"
+            android:label="@string/title_activity_enable_bluetooth"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoDisplay" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ExecuteActivity.ConnectWifi"
+            android:label="@string/title_activity_connect_wifi"
+            android:launchMode="singleInstance" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ExecuteActivity.OpenFacebook"
+            android:label="@string/title_activity_open_facebook"
+            android:launchMode="singleInstance" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ExecuteActivity.OpenCamera"
+            android:label="@string/title_activity_open_camera"
+            android:screenOrientation="landscape"
+            >
+          <!-- configure this activity to use landscape orientation -->
+
+            <intent-filter>
+        		<!-- <action android:name="android.intent.action.MAIN" /> -->
+        		<category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+             <activity
+            android:name=".ExecuteActivity.ReadDestination"
+            android:launchMode="singleInstance"
+            android:label="@string/title_activity_read_destination" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ExecuteActivity.Beam"
+            android:launchMode="singleInstance"
+            android:label="@string/title_activity_beam">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+				<data android:mimeType="application/vnd.com.example.android.beam"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".WriteActivity.WriteString"
+            android:label="@string/title_activity_write_string" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.arthur.pervasivenfc.MainActivity" />
+        </activity>
+        <activity
+            android:name=".WriteActivity.WriteDestination"
+            android:label="@string/title_activity_write_string" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.arthur.pervasivenfc.MainActivity" />
+        </activity>
+        <activity
+            android:name=".WriteActivity.WriteUri"
+            android:label="@string/title_activity_write_uri" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.arthur.pervasivenfc.MainActivity" />
+        </activity>
+        <activity
+            android:name=".WriteActivity.WriteCall"
+            android:label="@string/title_activity_write_call" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.arthur.pervasivenfc.MainActivity" />
+        </activity>
+        <activity
+            android:name=".WriteActivity.WriteSetting"
+            android:label="@string/title_activity_write_setting" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.arthur.pervasivenfc.MainActivity" />
+        </activity>
+        <activity
+            android:name=".WriteActivity.WriteBluetooth"
+            android:label="@string/title_activity_write_bluetooth" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.arthur.pervasivenfc.MainActivity" />
+        </activity>
+        <activity
+            android:name=".WriteActivity.WriteWifi"
+            android:label="@string/title_activity_write_wifi" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.arthur.pervasivenfc.MainActivity" />
+        </activity>
+        <activity
+            android:name=".WriteActivity.WriteFacebook"
+            android:label="@string/title_activity_write_facebook" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.arthur.pervasivenfc.MainActivity" />
+        </activity>
+        <activity
+            android:name=".WriteActivity.WriteCamera"
+            android:label="@string/title_activity_write_camera" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.arthur.pervasivenfc.MainActivity" />
+        </activity>
+        <activity
+            android:name=".WriteActivity.WriteId"
+            android:label="@string/title_activity_write_camera" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.arthur.pervasivenfc.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ExecuteActivity.CameraView"
+            android:label="@string/title_activity_camera_view" >
+            <intent-filter>
+                <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

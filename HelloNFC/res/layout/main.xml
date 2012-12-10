@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/wavy_blue" >
+    
+    <LinearLayout
+        android:id="@+id/tabBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        
+    		<Button
+        	android:id="@+id/slide_button"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:drawableLeft="@drawable/ic_launcher"
+        	android:layout_marginTop="10dp"
+        	android:layout_marginLeft="5dp"
+        	android:text="@string/slide_button" />
+    		
+    		<!-- <Button
+        	android:id="@+id/slide_button_2"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_marginTop="10dp"
+        	android:layout_marginLeft="174dp"
+        	android:text="@string/slide_button_2" /> -->
+    
+    </LinearLayout>
+    
+    <TextView 
+	    android:id="@+id/quick_access"
+	    android:layout_width="fill_parent"
+	    android:layout_marginTop="10dp"
+	    android:layout_marginLeft="10dp"
+	    android:layout_height="25dp"
+	    android:textColor="@color/white"
+	    android:text="Quick Access" />
+
+    <com.arthur.pervasivenfc.UserInterface.RayMenu
+        android:id="@+id/ray_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" />
+    
+    <TextView 
+	    android:id="@+id/basic_apps"
+	    android:layout_width="fill_parent"
+	    android:layout_marginTop="10dp"
+	    android:layout_marginLeft="10dp"
+	    android:layout_height="25dp"
+	    android:textColor="@color/white"
+	    android:text="Basic Apps" />
+    
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="80dp"
+    android:layout_weight="1.0"
+    android:orientation="horizontal" >
+           
+    	<Button
+        	android:id="@+id/button1"
+        	android:layout_width="wrap_content"
+        	android:layout_weight="1"
+        	android:layout_height="80dp"
+        	android:layout_marginLeft="10dp"
+        	android:drawableLeft="@drawable/string_button"
+        	android:onClick="writeString"
+        	android:background="@drawable/button_custom"
+        	android:text="@string/write_string" />
+
+    	<Button
+        	android:id="@+id/button2"
+        	android:layout_width="wrap_content"
+        	android:layout_weight="1"
+        	android:layout_height="80dp"
+        	android:layout_marginRight="10dp"
+        	android:drawableLeft="@drawable/url"
+        	android:onClick="writeUri"
+        	android:background="@drawable/button_custom_2"
+        	android:text="@string/write_url" />
+    
+    </LinearLayout>
+    
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="80dp"
+    android:layout_weight="1.0"
+    android:orientation="horizontal" >
+    	
+        <Button
+        	android:id="@+id/button4"
+        	android:layout_width="wrap_content"
+        	android:layout_weight="1.0"
+        	android:layout_height="80dp"
+        	android:layout_marginLeft="10dp"
+        	android:drawableLeft="@drawable/contact_image"
+        	android:onClick="writeContact"
+        	android:background="@drawable/button_custom3"
+        	android:text="@string/add_contact" />
+
+    	<Button
+        	android:id="@+id/button5"
+        	android:layout_width="wrap_content"
+        	android:layout_weight="1.0"
+        	android:layout_height="80dp"
+        	android:layout_marginRight="10dp"
+        	android:drawableLeft="@drawable/phone_image"
+        	android:onClick="writeCall"
+        	android:background="@drawable/button_custom4"
+        	android:text="@string/make_call" />
+	
+    </LinearLayout>
+    
+    <TextView 
+	    android:id="@+id/basic_apps_5"
+	    android:layout_width="fill_parent"
+	    android:layout_marginTop="20dp"
+	    android:layout_marginLeft="10dp"
+	    android:layout_height="25dp"
+	    android:textColor="@color/white"
+	    android:text="Social App" />
+    
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/button_custom6"
+        android:drawableLeft="@drawable/facebook_icon"
+        android:onClick="writeFacebook"
+        android:text="@string/open_facebook" />
+     
+     <TextView 
+	    android:id="@+id/basic_apps_3"
+	    android:layout_width="fill_parent"
+	    android:layout_marginTop="20dp"
+	    android:layout_marginLeft="10dp"
+	    android:layout_height="25dp"
+	    android:textColor="@color/white"
+	    android:text="Maps App" />
+    
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:drawableLeft="@drawable/google_maps_button"
+        android:onClick="writeDestination"
+        android:background="@drawable/button_custom6"
+        android:text="@string/destination_2" />
+    
+    <TextView 
+	    android:id="@+id/basic_apps_2"
+	    android:layout_width="fill_parent"
+	    android:layout_marginTop="20dp"
+	    android:layout_marginLeft="10dp"
+	    android:layout_height="25dp"
+	    android:textColor="@color/white"
+	    android:text="Setting Apps" />
+    
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="80dp"
+    android:layout_weight="1.0"
+    android:orientation="horizontal" >
+    
+    	<Button
+        	android:id="@+id/button9"
+        	android:layout_width="match_parent"
+        	android:layout_height="80dp"
+        	android:layout_weight="1.0"
+        	android:layout_marginLeft="10dp"
+        	android:drawableLeft="@drawable/bluetooth_icon"
+        	android:onClick="writeBluetooth"
+        	android:background="@drawable/button_custom3"
+        	android:text="Enable/disable Bluetooth" />
+    
+    	<Button
+        	android:id="@+id/button10"
+        	android:layout_width="match_parent"
+        	android:layout_height="80dp"
+        	android:layout_weight="1.0"
+        	android:layout_marginRight="10dp"
+        	android:drawableLeft="@drawable/wifi_icon_2"
+        	android:onClick="writeWifi"
+        	android:background="@drawable/button_custom6"
+        	android:text="Enable/disable Wi-Fi" />
+    
+    </LinearLayout>
+    
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:drawableLeft="@drawable/brightness_button_2"
+        android:onClick="writeBrightness"
+        android:background="@drawable/button_custom4"
+        android:text="@string/write_brightness" />
+    
+    <TextView 
+	    android:id="@+id/basic_apps_1"
+	    android:layout_width="fill_parent"
+	    android:layout_marginTop="20dp"
+	    android:layout_marginLeft="10dp"
+	    android:layout_height="25dp"
+	    android:textColor="@color/white"
+	    android:text="Android Beam Apps" />
+    
+    
+    	<Button 
+       		android:id="@+id/button7"
+        	android:layout_width="fill_parent"
+        	android:layout_height="80dp"
+        	android:layout_marginLeft="10dp"
+        	android:layout_marginRight="10dp"
+        	android:drawableLeft="@drawable/beam_button"
+        	android:onClick="beam"
+        	android:background="@drawable/button_custom3"
+        	android:text="@string/Beam" />
+    	
+    
+    <TextView 
+	    android:id="@+id/basic_apps"
+	    android:layout_width="fill_parent"
+	    android:layout_marginTop="20dp"
+	    android:layout_marginLeft="10dp"
+	    android:layout_height="25dp"
+	    android:textColor="@color/white"
+	    android:text="Visio Stream App" />
+    
+    <Button 
+        android:id="@+id/button13"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:drawableLeft="@drawable/live_stream_icon"
+        android:onClick="writeCamera"
+        android:background="@drawable/button_custom6"
+        android:text="Live streaming between two devices using NFC" />
+    <Button
+        android:id="@+id/button25"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_custom6"
+        android:onClick="writeId"
+        android:text="@string/test_protocol" />  
+        
+    
+</LinearLayout>
+</ScrollView>
